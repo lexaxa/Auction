@@ -1,0 +1,24 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="GovAuction:war exploded">
+    <output-path>$PROJECT_DIR$/classes/artifacts/GovAuction_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="GovAuction/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="GovAuction" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="hibernate:hibernate:3.0" />
+          <element id="library" level="project" name="commons-collections-3.1" />
+          <element id="library" level="project" name="javassist-3.12.0.GA" />
+          <element id="library" level="project" name="jta-1.1" />
+          <element id="library" level="project" name="mysqlJDBC-3.1.13" />
+          <element id="library" level="project" name="commons-logging" />
+          <element id="library" level="project" name="hibernate3" />
+          <element id="library" level="project" name="slf4j-log4j12-1.5.3" />
+          <element id="library" level="project" name="ejb3-persistence" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
