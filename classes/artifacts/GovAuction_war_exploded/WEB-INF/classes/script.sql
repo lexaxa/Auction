@@ -1,0 +1,22 @@
+CREATE TABLE categories (
+	id INT(11) NOT NULL AUTO_INCREMENT, 
+	NAME VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id)
+) ;
+
+CREATE TABLE posts (
+	id INT(11) NOT NULL AUTO_INCREMENT, 
+	title VARCHAR(255) NOT NULL, 
+	summary TEXT NOT NULL, 
+	body TEXT NOT NULL, 
+	categoryId INT(11) NOT NULL , 
+	CONSTRAINT userId PRIMARY KEY (id)
+) ;
+	
+ALTER TABLE posts ADD CONSTRAINT CONSTR_POST_CATEGORY FOREIGN KEY (id) REFERENCES categories (id) ON DELETE CASCADE;
+
+
+INSERT INTO "categories" ("id", "name") VALUES
+  (1,'News'),
+  (2,'Java');
+COMMIT;

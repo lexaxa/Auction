@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="java_govauction" product="MySQL" version="5.0.96-community-nt" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )" uuid="6bf677be-3c98-489b-b2ce-f6293030da7b">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost:3306/</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>dfd8dfc5dfc5dfde</user-password>
+    <schema-pattern>java_auction.*</schema-pattern>
+    <default-schemas>java_auction.*</default-schemas>
+    <libraries>
+      <library>
+        <url>jar://$PROJECT_DIR$/mysql-connector-java-5.1.26-bin.jar!/</url>
+      </library>
+      <library>
+        <url>file://$PROJECT_DIR$/mysql-connector-license.txt</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="java_auction" />
+    <table name="lot_orders" schema="" catalog="java_auction" type="TABLE">
+      <column name="order_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="participant_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="lot_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+    </table>
+    <table name="lots" schema="" catalog="java_auction" type="TABLE">
+      <column name="lot_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="description" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" />
+      <column name="owner_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="lot_date" sqlType="DATE" length="10" precision="0" nullable="true" jdbcType="91" />
+      <primary-key name="PRIMARY" columns="lot_id" />
+    </table>
+    <table name="owners" schema="" catalog="java_auction" type="TABLE">
+      <column name="owner_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="owner_name" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="owner_id" />
+    </table>
+    <table name="participants" schema="" catalog="java_auction" type="TABLE">
+      <column name="participant_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="participant_name" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="participant_id" />
+    </table>
+    <table name="registrations" schema="" catalog="java_auction" type="TABLE">
+      <column name="registration_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="registration_id" />
+    </table>
+  </data-source>
+</component>
